@@ -44,12 +44,13 @@ def remove_block(position):
             break
 
 block_grid = BlockGrid()
-for x in range (0,3):
+for x in range (0,50):
     for y in range (0, 3):
-        for z in range (0, 3):
+        for z in range (0, 50):
             add_block_to_grid(block_grid, x, y, z, 1)
+
 block_grid.check_neighbors()
+block_grid.update_grid_with_mesh()
 
-
-logging.info(repr(block_grid))
+# logging.info(repr(block_grid))
 app.run()
